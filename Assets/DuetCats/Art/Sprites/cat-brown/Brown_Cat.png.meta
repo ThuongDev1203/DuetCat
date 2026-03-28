@@ -1,0 +1,3145 @@
+fileFormatVersion: 2
+guid: 2e6274f71663243edb9759ebf138c5b8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9096017134115415263
+    second: Brown_Cat/1
+  - first:
+      213: 2883323615731525558
+    second: Brown_Cat/2
+  - first:
+      213: 1608781855906810118
+    second: Brown_Cat/3
+  - first:
+      213: -2090907416276381723
+    second: Brown_Cat/4
+  - first:
+      213: 1845835704147817614
+    second: Brown_Cat/BirdToy
+  - first:
+      213: 6400103515378212522
+    second: Brown_Cat/BirdToyRope
+  - first:
+      213: 7553472901835704388
+    second: Brown_Cat/Body
+  - first:
+      213: -573428005239314924
+    second: Brown_Cat/BuffterflyWings
+  - first:
+      213: -4867158971487296834
+    second: Brown_Cat/Crying1
+  - first:
+      213: 7556084326229014502
+    second: Brown_Cat/Crying2
+  - first:
+      213: 420260101704366713
+    second: Brown_Cat/Crying3
+  - first:
+      213: 7964983089393931710
+    second: Brown_Cat/DreamPopup_1
+  - first:
+      213: -6991437157285773133
+    second: Brown_Cat/DreamPopup_3
+  - first:
+      213: 4345899886412260907
+    second: Brown_Cat/EatMouth
+  - first:
+      213: 3751066604815222253
+    second: Brown_Cat/Eye
+  - first:
+      213: -1457793766069062115
+    second: Brown_Cat/Eye_Yawn
+  - first:
+      213: 2567993450931947959
+    second: Brown_Cat/Eyebrow_Sad
+  - first:
+      213: 6272116378147274687
+    second: Brown_Cat/EyesStun
+  - first:
+      213: 5494430200774283947
+    second: Brown_Cat/Fish
+  - first:
+      213: -3457724063002174290
+    second: Brown_Cat/Hair
+  - first:
+      213: 7593048661836372814
+    second: Brown_Cat/Headphone
+  - first:
+      213: 1229227061553291723
+    second: Brown_Cat/Heart
+  - first:
+      213: 8036086931835486849
+    second: Brown_Cat/HungryMouth
+  - first:
+      213: 4725151209634423983
+    second: Brown_Cat/L_Crying1
+  - first:
+      213: 7849454989726407268
+    second: Brown_Cat/L_Crying2
+  - first:
+      213: 6340440239088356502
+    second: Brown_Cat/L_Crying3
+  - first:
+      213: 4398754767088320787
+    second: Brown_Cat/L_Ear
+  - first:
+      213: -8062994670535587352
+    second: Brown_Cat/Leg
+  - first:
+      213: -2448248427121633883
+    second: Brown_Cat/Leg copy
+  - first:
+      213: 2011208033388165799
+    second: Brown_Cat/Leg_Stand
+  - first:
+      213: 7676873307041159360
+    second: Brown_Cat/Leg_Up
+  - first:
+      213: 1140275617720587094
+    second: Brown_Cat/Ma
+  - first:
+      213: 1131911695926589780
+    second: Brown_Cat/MouseToy
+  - first:
+      213: -8137801895715006866
+    second: Brown_Cat/MouseToyTail
+  - first:
+      213: -7513433790391312915
+    second: Brown_Cat/MouseToy_2
+  - first:
+      213: -128183775562561567
+    second: Brown_Cat/MouseToy_4
+  - first:
+      213: -5225498398077874762
+    second: Brown_Cat/Mouth_Cry
+  - first:
+      213: 7068717189140714181
+    second: Brown_Cat/Mouth_Eat
+  - first:
+      213: 2012798682431753887
+    second: Brown_Cat/Mouth_Sad
+  - first:
+      213: -4005520690166907538
+    second: Brown_Cat/Mouth_Yawn
+  - first:
+      213: 2256730537075279551
+    second: Brown_Cat/Mushroom_1
+  - first:
+      213: 8372399323398761070
+    second: Brown_Cat/Mushroom_2
+  - first:
+      213: -662240849356232291
+    second: Brown_Cat/Mushroom_3
+  - first:
+      213: -144760616003598015
+    second: Brown_Cat/Not_1
+  - first:
+      213: -7048384176088022337
+    second: Brown_Cat/Not_3
+  - first:
+      213: 8039154366909918137
+    second: Brown_Cat/R_Ear
+  - first:
+      213: 7910078703328977205
+    second: Brown_Cat/Saliva_1
+  - first:
+      213: 6578569038299305104
+    second: Brown_Cat/Saliva_2
+  - first:
+      213: -7675411147813736743
+    second: Brown_Cat/Shadow
+  - first:
+      213: -4818104207975664070
+    second: Brown_Cat/Slap_1
+  - first:
+      213: 6068198807809807876
+    second: Brown_Cat/Slap_2
+  - first:
+      213: -6812016014737420334
+    second: Brown_Cat/Smoke_1
+  - first:
+      213: 1147261126771675735
+    second: Brown_Cat/Tail_3
+  - first:
+      213: 135449668406999808
+    second: Brown_Cat/Tear
+  - first:
+      213: -8578344591320316236
+    second: Santa_Cat/Tear
+  - first:
+      213: -4653854824249723466
+    second: Brown_Cat/Tear_2
+  - first:
+      213: 2762012048165193049
+    second: Brown_Cat/Tounger
+  - first:
+      213: -9080639234752193787
+    second: Brown_Cat/WoolRoll1
+  - first:
+      213: 4269282878622203989
+    second: Brown_Cat/z
+  - first:
+      213: 2820277125105566629
+    second: Cat1_Grey/Broom
+  - first:
+      213: 8804908011053808036
+    second: Cat1_Grey/Leaf_1
+  - first:
+      213: -6086968149561667612
+    second: Cat1_Grey/Wild
+  - first:
+      213: -3642646168228401544
+    second: Cat1_Grey/fx_smoke_1
+  - first:
+      213: -7468726938431673584
+    second: Cat1_Grey/fx_smoke_2
+  - first:
+      213: 367088271074957651
+    second: Cat1_Grey/fx_smoke_3
+  - first:
+      213: -2933424125609455246
+    second: Cat1_Grey/fx_smoke_4
+  - first:
+      213: -456178145694685783
+    second: Cat1_Grey/fx_smoke_6
+  - first:
+      213: -5876500487477651493
+    second: Cat1_Grey/fx_smoke_8
+  - first:
+      213: -1877447584195153526
+    second: Japanese_Bobtail_Cat/Collar
+  - first:
+      213: -7471322443562009261
+    second: White_Cat/Leaf_2
+  - first:
+      213: -750288859401750734
+    second: White_Cat/Rain_1
+  - first:
+      213: -7210157110323878683
+    second: White_Cat/Rain_2
+  - first:
+      213: -6924517935937965924
+    second: Yellow_Cat/Arm_L
+  - first:
+      213: 308710232475097151
+    second: Yellow_Cat/Blink
+  - first:
+      213: -8175681881343330247
+    second: Yellow_Cat/Flash
+  - first:
+      213: -4572874262277979371
+    second: Yellow_Cat/Phone
+  - first:
+      213: -7226351122013158288
+    second: Yellow_Cat/Phone_2
+  - first:
+      213: 6268627927744686753
+    second: Yellow_Cat/Stick_1
+  - first:
+      213: 6784337607615279357
+    second: Yellow_Cat/Stick_2
+  - first:
+      213: 112127296009917741
+    second: Yellow_Cat/Stick_3
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: -0.5
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Brown_Cat_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 166
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c2c094cffffffff0800000000000000
+      internalID: -997145916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 274
+        width: 95
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b490ec62000000000800000000000000
+      internalID: 651037003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 453
+        width: 92
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2315c14cffffffff0800000000000000
+      internalID: -1004777166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_3
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 496
+        width: 82
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d163c06000000000800000000000000
+      internalID: 1623417299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_4
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 157
+        width: 72
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00aa2b70000000000800000000000000
+      internalID: 129149440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_5
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 142
+        width: 163
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efe983beffffffff0800000000000000
+      internalID: -348610818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_6
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 217
+        width: 28
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a29b5efffffffff0800000000000000
+      internalID: -27553115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_7
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 198
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17104476000000000800000000000000
+      internalID: 1732510065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_8
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 227
+        width: 30
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c049c7beffffffff0800000000000000
+      internalID: -344157172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_9
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 211
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee3993e4000000000800000000000000
+      internalID: 1312396270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_10
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 208
+        width: 92
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df845e3000000000800000000000000
+      internalID: 1045729233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_11
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 257
+        width: 89
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0dbf2aeffffffff0800000000000000
+      internalID: -365970163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_12
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 311
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1135d259ffffffff0800000000000000
+      internalID: -1792191727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_13
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 322
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dde07d0000000000800000000000000
+      internalID: 225504722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_14
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 334
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92c6083affffffff0800000000000000
+      internalID: -1551864791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_15
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 339
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf9097affffffff0800000000000000
+      internalID: -1483694114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_16
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 333
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f568dd05000000000800000000000000
+      internalID: 1356695135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_17
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 322
+        width: 38
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8392b318ffffffff0800000000000000
+      internalID: -2126829256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_18
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 430
+        width: 48
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f4f06c4000000000800000000000000
+      internalID: 1281422584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_19
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 3
+        width: 47
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1c6e5b5000000000800000000000000
+      internalID: 1532914718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_20
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 0
+        width: 185
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65533eddffffffff0800000000000000
+      internalID: -572312234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_21
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 34
+        width: 94
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d02f4532000000000800000000000000
+      internalID: 592769549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_22
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 491
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 345de8d8ffffffff0800000000000000
+      internalID: -1920019133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_23
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 491
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a2851f8ffffffff0800000000000000
+      internalID: -1894415710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_24
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 493
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d08eade8ffffffff0800000000000000
+      internalID: -1898256371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_25
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 251
+        width: 64
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be9c04effffffff0800000000000000
+      internalID: -468934989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_26
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 351
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e58f36000000000800000000000000
+      internalID: 1677221515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_27
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 252
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18b7ff70000000000800000000000000
+      internalID: 134183809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat_28
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 196
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1189199fffffffff0800000000000000
+      internalID: -107898863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/1
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 244
+        width: 48
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b1f2afb9474c180800000000000000
+      internalID: -9096017134115415263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/2
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 332
+        width: 48
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b72c205d8f930820800000000000000
+      internalID: 2883323615731525558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/3
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 408
+        width: 48
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6094b62039a835610800000000000000
+      internalID: 1608781855906810118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/4
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 408
+        width: 48
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5efcd9278ca9bf2e0800000000000000
+      internalID: -2090907416276381723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/BirdToy
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 178
+        width: 62
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e84b6731bc9bd9910800000000000000
+      internalID: 1845835704147817614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/BirdToyRope
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 401
+        width: 5
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaed8dfec3cb1d850800000000000000
+      internalID: 6400103515378212522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Body
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 179
+        height: 272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448c47e859353d860800000000000000
+      internalID: 7553472901835704388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Buffterfly
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 413
+        width: 26
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/BuffterflyWings
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 433
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41623737446ca08f0800000000000000
+      internalID: -573428005239314924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Crying1
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 475
+        width: 14
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb2e427e3b0647cb0800000000000000
+      internalID: -4867158971487296834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Crying2
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 291
+        width: 39
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7f6cd29aa9cd860800000000000000
+      internalID: 7556084326229014502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Crying3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 352
+        width: 37
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97abb5bf55015d500800000000000000
+      internalID: 420260101704366713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/DreamPopup_1
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 6
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb591556bed498e60800000000000000
+      internalID: 7964983089393931710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/DreamPopup_2
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 336
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/DreamPopup_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 303
+        width: 110
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0c38a92fc69fe90800000000000000
+      internalID: -6991437157285773133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/EatMouth
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 423
+        width: 45
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b26630fcbecbf4c30800000000000000
+      internalID: 4345899886412260907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Eye
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 322
+        width: 72
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de587dcf3377e0430800000000000000
+      internalID: 3751066604815222253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Eye_2
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 254
+        width: 74
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Eye_Yawn
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 457
+        width: 320
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16bca12b40e4cbe0800000000000000
+      internalID: -1457793766069062115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Eyebrow_Sad
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 492
+        width: 65
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b90454107853a320800000000000000
+      internalID: 2567993450931947959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/EyesStun
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 453
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbfb0656d980b0750800000000000000
+      internalID: 6272116378147274687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Fish
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 465
+        width: 91
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba254582823204c40800000000000000
+      internalID: 5494430200774283947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Gon
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 385
+        width: 27
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Hair
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 198
+        width: 156
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eac5f65d842b300d0800000000000000
+      internalID: -3457724063002174290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Headphone
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 346
+        width: 153
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b130b378def5960800000000000000
+      internalID: 7593048661836372814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Heart
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 304
+        width: 75
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc16e20ff771f0110800000000000000
+      internalID: 1229227061553291723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/HungryMouth
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 492
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182863ccc7ae58f60800000000000000
+      internalID: 8036086931835486849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/L_Crying1
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 401
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa464408dfb139140800000000000000
+      internalID: 4725151209634423983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/L_Crying2
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 416
+        width: 48
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a5f0799bddeec60800000000000000
+      internalID: 7849454989726407268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/L_Crying3
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 416
+        width: 45
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c447aedc4cdf750800000000000000
+      internalID: 6340440239088356502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/L_Ear
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 2
+        width: 179
+        height: 272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3110b52b7248b0d30800000000000000
+      internalID: 4398754767088320787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Leg
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 213
+        width: 45
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e9cbd4111d7a1090800000000000000
+      internalID: -8062994670535587352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Leg copy
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 430
+        width: 48
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a59183e603160ed0800000000000000
+      internalID: -2448248427121633883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Leg_Stand
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 164
+        width: 47
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aa738fec0f39eb10800000000000000
+      internalID: 2011208033388165799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Leg_Up
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 2
+        width: 46
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8ddd3599bb98a60800000000000000
+      internalID: 7676873307041159360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Ma
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 311
+        width: 114
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 653564402a213df00800000000000000
+      internalID: 1140275617720587094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/MouseToy
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 311
+        width: 58
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45970d8b0bb55bf00800000000000000
+      internalID: 1131911695926589780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/MouseToyTail
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 481
+        width: 31
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e661861ba48b01f80800000000000000
+      internalID: -8137801895715006866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/MouseToy_1
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 156
+        width: 53
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/MouseToy_2
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 451
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ded1f4886cbeab790800000000000000
+      internalID: -7513433790391312915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/MouseToy_3
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 99
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/MouseToy_4
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 427
+        width: 48
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e700a70989983ef0800000000000000
+      internalID: -128183775562561567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Mouth_Cry
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 359
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd023094ec4b77b0800000000000000
+      internalID: -5225498398077874762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Mouth_Eat
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 46
+        width: 104
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c21e64f4d0291260800000000000000
+      internalID: 7068717189140714181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Mouth_Sad
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 501
+        width: 44
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e08b6ccb5eeeb10800000000000000
+      internalID: 2012798682431753887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Mouth_Yawn
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 251
+        width: 64
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6dbf1a87288968c0800000000000000
+      internalID: -4005520690166907538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Mushroom_1
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 329
+        width: 87
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb606208774815f10800000000000000
+      internalID: 2256730537075279551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Mushroom_2
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 418
+        width: 87
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6a67e463dcb03470800000000000000
+      internalID: 8372399323398761070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Mushroom_3
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 26
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d996e5ac47f3fc6f0800000000000000
+      internalID: -662240849356232291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Not_1
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 396
+        width: 37
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14983a99cf4bdfdf0800000000000000
+      internalID: -144760616003598015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Not_2
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 271
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Not_3
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 364
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb20acf8feb1f2e90800000000000000
+      internalID: -7048384176088022337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/R_Ear
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 183
+        width: 179
+        height: 272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb223ead40d09f60800000000000000
+      internalID: 8039154366909918137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Saliva_1
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 486
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5316e49dbae36cd60800000000000000
+      internalID: 7910078703328977205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Saliva_2
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 237
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09496328fa5cb4b50800000000000000
+      internalID: 6578569038299305104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Shadow
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 2
+        width: 182
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de2d752a367b7590800000000000000
+      internalID: -7675411147813736743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Slap_1
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 473
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a36bbc010c7a22db0800000000000000
+      internalID: -4818104207975664070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Slap_2
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 121
+        width: 65
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 406d3fd3aa2963450800000000000000
+      internalID: 6068198807809807876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Smoke_1
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 468
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dfcd45b68bd671a0800000000000000
+      internalID: -6812016014737420334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Tail_3
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 143
+        width: 163
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75217d59ae3ebef00800000000000000
+      internalID: 1147261126771675735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Tear
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 416
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00bf75a71c631e100800000000000000
+      internalID: 135449668406999808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Santa_Cat/Tear
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 416
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b685715b0993f880800000000000000
+      internalID: -8578344591320316236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Tear_2
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 514
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b57b5cc1bf2a6fb0800000000000000
+      internalID: -4653854824249723466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/Tounger
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 424
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9554c34f253a45620800000000000000
+      internalID: 2762012048165193049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/WoolRoll1
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 358
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50bde1f2ab61bf180800000000000000
+      internalID: -9080639234752193787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown_Cat/z
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 371
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5500fe1982a8f3b30800000000000000
+      internalID: 4269282878622203989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_Grey/Broom
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 2
+        width: 64
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3c3125a13a32720800000000000000
+      internalID: 2820277125105566629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_Grey/Leaf_1
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 500
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a97ad68f21513a70800000000000000
+      internalID: 8804908011053808036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_Grey/Leaf_2
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 305
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_Grey/Wild
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 347
+        width: 105
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ef8246d7beb68ba0800000000000000
+      internalID: -6086968149561667612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_Grey/fx_smoke_1
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 47
+        width: 136
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87eee4c0c98b27dc0800000000000000
+      internalID: -3642646168228401544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_Grey/fx_smoke_2
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 113
+        width: 136
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ba366ab60c95890800000000000000
+      internalID: -7468726938431673584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_Grey/fx_smoke_3
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 119
+        width: 136
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35992ae66d8281500800000000000000
+      internalID: 367088271074957651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_Grey/fx_smoke_4
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 179
+        width: 136
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 271dc79bc426a47d0800000000000000
+      internalID: -2933424125609455246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_Grey/fx_smoke_5
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 74
+        width: 136
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_Grey/fx_smoke_6
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 237
+        width: 136
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a56297b4645ba9f0800000000000000
+      internalID: -456178145694685783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_Grey/fx_smoke_7
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 212
+        width: 136
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat1_Grey/fx_smoke_8
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 245
+        width: 136
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd71c7111f9727ea0800000000000000
+      internalID: -5876500487477651493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Japanese_Bobtail_Cat/Collar
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 425
+        width: 51
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81f1ab8e57f1f5e0800000000000000
+      internalID: -1877447584195153526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Cat/Leaf_1
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: -219
+        width: 31
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Cat/Leaf_2
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 35
+        width: 155
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d351582d7805890800000000000000
+      internalID: -7471322443562009261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Cat/Rain_1
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 431
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 237fc60f1407695f0800000000000000
+      internalID: -750288859401750734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Cat/Rain_2
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 283
+        width: 43
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e463682f4060fb90800000000000000
+      internalID: -7210157110323878683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_Cat/Arm_L
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 487
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90b89bff9b27ef90800000000000000
+      internalID: -6924517935937965924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_Cat/Blink
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 251
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f38d4312252c84400800000000000000
+      internalID: 308710232475097151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_Cat/Flash
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 369
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938fee145a42a8e80800000000000000
+      internalID: -8175681881343330247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_Cat/Phone
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 364
+        width: 90
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 513056a2613e980c0800000000000000
+      internalID: -4572874262277979371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_Cat/Phone_2
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 478
+        width: 90
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 074092ef0f7d6bb90800000000000000
+      internalID: -7226351122013158288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_Cat/Stick_1
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 197
+        width: 17
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aaa05e33e3aef650800000000000000
+      internalID: 6268627927744686753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_Cat/Stick_2
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 303
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df07b32fb1fc62e50800000000000000
+      internalID: 6784337607615279357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_Cat/Stick_3
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 482
+        width: 10
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d25db408e2b5e8100800000000000000
+      internalID: 112127296009917741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Brown_Cat/1: -9096017134115415263
+      Brown_Cat/2: 2883323615731525558
+      Brown_Cat/3: 1608781855906810118
+      Brown_Cat/4: -2090907416276381723
+      Brown_Cat/BirdToy: 1845835704147817614
+      Brown_Cat/BirdToyRope: 6400103515378212522
+      Brown_Cat/Body: 7553472901835704388
+      Brown_Cat/BuffterflyWings: -573428005239314924
+      Brown_Cat/Crying1: -4867158971487296834
+      Brown_Cat/Crying2: 7556084326229014502
+      Brown_Cat/Crying3: 420260101704366713
+      Brown_Cat/DreamPopup_1: 7964983089393931710
+      Brown_Cat/DreamPopup_3: -6991437157285773133
+      Brown_Cat/EatMouth: 4345899886412260907
+      Brown_Cat/Eye: 3751066604815222253
+      Brown_Cat/Eye_Yawn: -1457793766069062115
+      Brown_Cat/Eyebrow_Sad: 2567993450931947959
+      Brown_Cat/EyesStun: 6272116378147274687
+      Brown_Cat/Fish: 5494430200774283947
+      Brown_Cat/Hair: -3457724063002174290
+      Brown_Cat/Headphone: 7593048661836372814
+      Brown_Cat/Heart: 1229227061553291723
+      Brown_Cat/HungryMouth: 8036086931835486849
+      Brown_Cat/L_Crying1: 4725151209634423983
+      Brown_Cat/L_Crying2: 7849454989726407268
+      Brown_Cat/L_Crying3: 6340440239088356502
+      Brown_Cat/L_Ear: 4398754767088320787
+      Brown_Cat/Leg: -8062994670535587352
+      Brown_Cat/Leg copy: -2448248427121633883
+      Brown_Cat/Leg_Stand: 2011208033388165799
+      Brown_Cat/Leg_Up: 7676873307041159360
+      Brown_Cat/Ma: 1140275617720587094
+      Brown_Cat/MouseToy: 1131911695926589780
+      Brown_Cat/MouseToyTail: -8137801895715006866
+      Brown_Cat/MouseToy_2: -7513433790391312915
+      Brown_Cat/MouseToy_4: -128183775562561567
+      Brown_Cat/Mouth_Cry: -5225498398077874762
+      Brown_Cat/Mouth_Eat: 7068717189140714181
+      Brown_Cat/Mouth_Sad: 2012798682431753887
+      Brown_Cat/Mouth_Yawn: -4005520690166907538
+      Brown_Cat/Mushroom_1: 2256730537075279551
+      Brown_Cat/Mushroom_2: 8372399323398761070
+      Brown_Cat/Mushroom_3: -662240849356232291
+      Brown_Cat/Not_1: -144760616003598015
+      Brown_Cat/Not_3: -7048384176088022337
+      Brown_Cat/R_Ear: 8039154366909918137
+      Brown_Cat/Saliva_1: 7910078703328977205
+      Brown_Cat/Saliva_2: 6578569038299305104
+      Brown_Cat/Shadow: -7675411147813736743
+      Brown_Cat/Slap_1: -4818104207975664070
+      Brown_Cat/Slap_2: 6068198807809807876
+      Brown_Cat/Smoke_1: -6812016014737420334
+      Brown_Cat/Tail_3: 1147261126771675735
+      Brown_Cat/Tear: 135449668406999808
+      Brown_Cat/Tear_2: -4653854824249723466
+      Brown_Cat/Tounger: 2762012048165193049
+      Brown_Cat/WoolRoll1: -9080639234752193787
+      Brown_Cat/z: 4269282878622203989
+      Brown_Cat_0: -997145916
+      Brown_Cat_1: 651037003
+      Brown_Cat_10: 1045729233
+      Brown_Cat_11: -365970163
+      Brown_Cat_12: -1792191727
+      Brown_Cat_13: 225504722
+      Brown_Cat_14: -1551864791
+      Brown_Cat_15: -1483694114
+      Brown_Cat_16: 1356695135
+      Brown_Cat_17: -2126829256
+      Brown_Cat_18: 1281422584
+      Brown_Cat_19: 1532914718
+      Brown_Cat_2: -1004777166
+      Brown_Cat_20: -572312234
+      Brown_Cat_21: 592769549
+      Brown_Cat_22: -1920019133
+      Brown_Cat_23: -1894415710
+      Brown_Cat_24: -1898256371
+      Brown_Cat_25: -468934989
+      Brown_Cat_26: 1677221515
+      Brown_Cat_27: 134183809
+      Brown_Cat_28: -107898863
+      Brown_Cat_3: 1623417299
+      Brown_Cat_4: 129149440
+      Brown_Cat_5: -348610818
+      Brown_Cat_6: -27553115
+      Brown_Cat_7: 1732510065
+      Brown_Cat_8: -344157172
+      Brown_Cat_9: 1312396270
+      Cat1_Grey/Broom: 2820277125105566629
+      Cat1_Grey/Leaf_1: 8804908011053808036
+      Cat1_Grey/Wild: -6086968149561667612
+      Cat1_Grey/fx_smoke_1: -3642646168228401544
+      Cat1_Grey/fx_smoke_2: -7468726938431673584
+      Cat1_Grey/fx_smoke_3: 367088271074957651
+      Cat1_Grey/fx_smoke_4: -2933424125609455246
+      Cat1_Grey/fx_smoke_6: -456178145694685783
+      Cat1_Grey/fx_smoke_8: -5876500487477651493
+      Japanese_Bobtail_Cat/Collar: -1877447584195153526
+      Santa_Cat/Tear: -8578344591320316236
+      White_Cat/Leaf_2: -7471322443562009261
+      White_Cat/Rain_1: -750288859401750734
+      White_Cat/Rain_2: -7210157110323878683
+      Yellow_Cat/Arm_L: -6924517935937965924
+      Yellow_Cat/Blink: 308710232475097151
+      Yellow_Cat/Flash: -8175681881343330247
+      Yellow_Cat/Phone: -4572874262277979371
+      Yellow_Cat/Phone_2: -7226351122013158288
+      Yellow_Cat/Stick_1: 6268627927744686753
+      Yellow_Cat/Stick_2: 6784337607615279357
+      Yellow_Cat/Stick_3: 112127296009917741
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
