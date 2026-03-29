@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using DuetCats.Scripts.Data;
 using DuetCats.Scripts.Core;
 
@@ -18,13 +19,15 @@ namespace DuetCats.Scripts.Gameplay
         [Header("Audio")]
         public AudioManager audioManager;
 
-        public float spawnOffset = 0.8f;
+        public float spawnOffset = 1.2f;
 
         private MidiNoteData[] notes;
         private int index = 0;
 
         bool hasSpawnedAll = false;
         bool hasWon = false;
+
+        int maxSpawnPerFrame = 2;
 
         void Start()
         {
@@ -38,7 +41,8 @@ namespace DuetCats.Scripts.Gameplay
 
             float currentTime = audioManager.GetTime();
 
-            //SPAWN TỪNG NOTE (KHÔNG GROUP)
+            int spawnCount = 0;
+
             while (index < notes.Length && notes[index].ta <= currentTime + spawnOffset)
             {
                 var data = notes[index];
@@ -46,33 +50,40 @@ namespace DuetCats.Scripts.Gameplay
                 bool isRight = data.n >= 100;
                 int lane = GetLaneFromNote(data);
 
-                SpawnSingle(data, isRight, lane);
+                float delay = Random.Range(0f, 0.08f);
+                StartCoroutine(SpawnWithDelay(data, isRight, lane, delay));
 
                 index++;
+                spawnCount++;
+
+                if (spawnCount >= maxSpawnPerFrame)
+                    break;
             }
 
-            //spawn
             if (!hasSpawnedAll && index >= notes.Length)
             {
                 hasSpawnedAll = true;
                 Debug.Log("All notes spawned");
             }
 
-            //WIN CONDITION
             if (hasSpawnedAll
                 && !hasWon
                 && NoteManager.Instance.ActiveNoteCount() == 0
                 && GameManager.Instance.IsPlaying)
             {
                 hasWon = true;
-
                 Debug.Log("🎉 WIN CONDITION MET");
-
                 GameManager.Instance.WinGame();
             }
         }
 
-        //SPAW
+        //SPAWN
+
+        IEnumerator SpawnWithDelay(MidiNoteData data, bool isRight, int lane, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            SpawnSingle(data, isRight, lane);
+        }
 
         void SpawnSingle(MidiNoteData data, bool isRight, int lane)
         {
@@ -104,8 +115,6 @@ namespace DuetCats.Scripts.Gameplay
             return pos;
         }
 
-        //LANE LOGIC
-
         int GetLaneFromNote(MidiNoteData d)
         {
             if (d.n == 101 || d.n == 98)
@@ -115,6 +124,7 @@ namespace DuetCats.Scripts.Gameplay
         }
 
         //PREFAB
+
         GameObject GetPrefab(MidiNoteData d)
         {
             if (d.id == 50) return lolipop_Long;

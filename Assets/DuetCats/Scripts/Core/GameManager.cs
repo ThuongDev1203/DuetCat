@@ -47,6 +47,26 @@ namespace DuetCats.Scripts.Core
                 audioManager.audioSource.Stop();
 
             InputController.Instance?.PlayLoseAnimation();
+            StartCoroutine(DelayReset());
+        }
+
+        IEnumerator DelayReset()
+        {
+            yield return new WaitForSeconds(1.5f);
+
+            UIManager.Instance.ShowStartUI();
+            ResetGameState();
+        }
+
+        void ResetGameState()
+        {
+            Score = 0;
+            Lives = 2;
+
+            UIManager.Instance.UpdateScore(Score);
+            UIManager.Instance.UpdateLives(Lives);
+
+            InputController.Instance.ResetInput();
         }
 
         //SCORE LIVES

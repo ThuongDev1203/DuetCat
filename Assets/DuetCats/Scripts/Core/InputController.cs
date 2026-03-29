@@ -53,6 +53,9 @@ namespace DuetCats.Scripts.Core
         public float checkRadius = 0.2f;
         public LayerMask noteLayer;
 
+        //Can Control
+        bool canControl = false;
+
         void Awake()
         {
             Instance = this;
@@ -79,6 +82,8 @@ namespace DuetCats.Scripts.Core
 
         void Update()
         {
+            if (!canControl) return;
+
             HandleTouch();
             HandleMouse();
 
@@ -93,6 +98,20 @@ namespace DuetCats.Scripts.Core
                 Debug.Log("TEST WIN ANIM");
                 PlayWinAnimation();
             }
+        }
+
+        public void StartAfterTutorial()
+        {
+            canControl = true;
+            SetAnimation(true);
+        }
+
+        public void ResetInput()
+        {
+            canControl = false;
+            isWinState = false;
+
+            SetAnimation(false);
         }
 
         //TAIL HELPER
@@ -132,11 +151,11 @@ namespace DuetCats.Scripts.Core
                 {
                     touches[id] = new TouchData() { isLeft = pos.x / Screen.width < 0.5f };
 
-                    if (!GameManager.Instance.IsPlaying && !GameManager.Instance.IsGameOver)
-                    {
-                        GameManager.Instance.StartGame();
-                        SetAnimation(true);
-                    }
+                    // if (!GameManager.Instance.IsPlaying && !GameManager.Instance.IsGameOver)
+                    // {
+                    //     GameManager.Instance.StartGame();
+                    //     SetAnimation(true);
+                    // }
                 }
 
                 if (touch.press.isPressed && touches.ContainsKey(id))
@@ -155,11 +174,11 @@ namespace DuetCats.Scripts.Core
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
                 mouseLeft = pos.x / Screen.width < 0.5f;
-                if (!GameManager.Instance.IsPlaying && !GameManager.Instance.IsGameOver)
-                {
-                    GameManager.Instance.StartGame();
-                    SetAnimation(true);
-                }
+                // if (!GameManager.Instance.IsPlaying && !GameManager.Instance.IsGameOver)
+                // {
+                //     GameManager.Instance.StartGame();
+                //     SetAnimation(true);
+                // }
             }
 
             if (Mouse.current.leftButton.isPressed)
