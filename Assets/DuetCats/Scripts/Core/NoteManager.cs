@@ -14,7 +14,6 @@ namespace DuetCats.Scripts.Core
         public float good = 0.15f;
 
         int combo = 0;
-        int score = 0;
 
         void Awake()
         {
@@ -31,23 +30,45 @@ namespace DuetCats.Scripts.Core
         {
             if (notes.Contains(note))
                 notes.Remove(note);
+
+            Debug.Log("Note removed, remain: " + notes.Count);
         }
 
-        // 🎯 HIT từ va chạm
-        public void Hit(Note note, int add, string type)
+        public void Hit(Note note)
         {
             combo++;
-            score += add;
 
-            Debug.Log($"{type} | Combo: {combo} | Score: {score}");
+            int score = GetScore(note.noteType);
+            GameManager.Instance.AddScore(score);
 
             Remove(note);
+        }
+
+        int GetScore(NoteType type)
+        {
+            switch (type)
+            {
+                case NoteType.Normal: return 2;
+                case NoteType.Strong: return 5;
+                case NoteType.Long: return 2;
+                case NoteType.Lollipop: return 8;
+                default: return 0;
+            }
+        }
+
+        public int ActiveNoteCount()
+        {
+            Debug.Log("Active Count = " + notes.Count);
+            return notes.Count;
         }
 
         public void Miss(Note note)
         {
             combo = 0;
+
             Debug.Log("MISS");
+
+            GameManager.Instance.LoseLife();
 
             Remove(note);
         }

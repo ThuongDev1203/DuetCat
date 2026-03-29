@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 namespace DuetCats.Scripts.Core
 {
@@ -7,10 +8,10 @@ namespace DuetCats.Scripts.Core
         public static GameManager Instance;
 
         public bool IsPlaying { get; private set; } = false;
+        public bool IsGameOver { get; private set; } = false;
 
         public int Score { get; private set; } = 0;
-        public int Lives { get; private set; } = 2; // tối đa 2 mạng
-
+        public int Lives { get; private set; } = 2;
         public AudioManager audioManager;
 
         void Awake()
@@ -23,6 +24,8 @@ namespace DuetCats.Scripts.Core
             if (IsPlaying) return;
 
             IsPlaying = true;
+            IsGameOver = false;
+
             Score = 0;
             Lives = 2;
 
@@ -38,19 +41,42 @@ namespace DuetCats.Scripts.Core
         public void StopGame()
         {
             IsPlaying = false;
+            IsGameOver = true;
+
+            if (audioManager != null)
+                audioManager.audioSource.Stop();
+
+            InputController.Instance?.PlayLoseAnimation();
         }
 
-        // ======================= SCORE & LIVES =======================
+        //SCORE LIVES
         public void AddScore(int amount)
         {
             Score += amount;
             UIManager.Instance.UpdateScore(Score);
         }
 
+        public void WinGame()
+        {
+            Debug.Log("WIN GAME CALLED");
+            IsPlaying = false;
+            StartCoroutine(WinDelay());
+        }
+
+        IEnumerator WinDelay()
+        {
+            yield return null;
+            IsGameOver = true;
+            audioManager.Stop();
+            InputController.Instance.PlayWinAnimation();
+        }
+
         public void LoseLife()
         {
             Lives--;
             if (Lives < 0) Lives = 0;
+
+            Debug.Log("LoseLife → Lives = " + Lives);
 
             UIManager.Instance.UpdateLives(Lives);
 

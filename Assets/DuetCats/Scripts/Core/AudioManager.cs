@@ -4,38 +4,30 @@ namespace DuetCats.Scripts.Core
 {
     public class AudioManager : MonoBehaviour
     {
-        public AudioSource audioSource;
+        public static AudioManager Instance;
 
-        double startDsp;
-        public float startDelay = 0.1f;
+        public AudioSource audioSource;
 
         void Awake()
         {
-
-            audioSource.playOnAwake = false;
-            audioSource.Stop();
-
-            Debug.Log("Audio STOPPED INIT");
-        }
-
-        void Start()
-        {
-            audioSource.Stop();
+            Instance = this;
         }
 
         public void Play()
         {
-            Debug.Log("PLAY CALLED");
+            audioSource.time = 0.1f;
+            audioSource.Play();
+        }
 
-            if (audioSource.isPlaying) return;
-
-            startDsp = AudioSettings.dspTime + startDelay;
-            audioSource.PlayScheduled(startDsp);
+        public void Stop()
+        {
+            if (audioSource != null && audioSource.isPlaying)
+                audioSource.Stop();
         }
 
         public float GetTime()
         {
-            return Mathf.Max(0, (float)(AudioSettings.dspTime - startDsp));
+            return audioSource.time;
         }
     }
 }

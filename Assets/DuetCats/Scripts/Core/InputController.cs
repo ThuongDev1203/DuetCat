@@ -8,6 +8,8 @@ namespace DuetCats.Scripts.Core
 {
     public class InputController : MonoBehaviour
     {
+        public static InputController Instance;
+
         [Header("Cats")]
         public Transform leftCat;
         public Transform rightCat;
@@ -25,6 +27,7 @@ namespace DuetCats.Scripts.Core
         string idle = "Idle_Start";
         string idlePlaying = "Idle_Playing";
         bool isPlayingAnim = false;
+        bool isWinState = false;
 
         [Header("Smooth Movement")]
         public float smoothTime = 0.05f;
@@ -52,6 +55,7 @@ namespace DuetCats.Scripts.Core
 
         void Awake()
         {
+            Instance = this;
             cam = Camera.main;
             zDepth = Mathf.Abs(cam.transform.position.z);
         }
@@ -68,7 +72,7 @@ namespace DuetCats.Scripts.Core
 
             SetAnimation(false);
 
-            // Start Tail Idle animation looping
+            //Tail looping
             PlayTailLoop(leftTailAnim, "Tail");
             PlayTailLoop(rightTailAnim, "Tail");
         }
@@ -78,12 +82,20 @@ namespace DuetCats.Scripts.Core
             HandleTouch();
             HandleMouse();
 
-            // =================== CHECK NOTE COLLISION ===================
-            CheckCatNoteCollision(leftMouthPoint, leftAnim);
-            CheckCatNoteCollision(rightMouthPoint, rightAnim);
+            if (GameManager.Instance.IsPlaying)
+            {
+                CheckCatNoteCollision(leftMouthPoint, leftAnim);
+                CheckCatNoteCollision(rightMouthPoint, rightAnim);
+            }
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                Debug.Log("TEST WIN ANIM");
+                PlayWinAnimation();
+            }
         }
 
-        // ================= TAIL HELPER =================
+        //TAIL HELPER
         void PlayTailLoop(SkeletonAnimation tailAnim, string animName)
         {
             if (tailAnim == null) return;
@@ -94,6 +106,8 @@ namespace DuetCats.Scripts.Core
 
         void SetAnimation(bool playing)
         {
+            if (GameManager.Instance.IsGameOver || isWinState) return;
+
             if (isPlayingAnim == playing) return;
             isPlayingAnim = playing;
 
@@ -118,7 +132,7 @@ namespace DuetCats.Scripts.Core
                 {
                     touches[id] = new TouchData() { isLeft = pos.x / Screen.width < 0.5f };
 
-                    if (!GameManager.Instance.IsPlaying)
+                    if (!GameManager.Instance.IsPlaying && !GameManager.Instance.IsGameOver)
                     {
                         GameManager.Instance.StartGame();
                         SetAnimation(true);
@@ -141,7 +155,7 @@ namespace DuetCats.Scripts.Core
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
                 mouseLeft = pos.x / Screen.width < 0.5f;
-                if (!GameManager.Instance.IsPlaying)
+                if (!GameManager.Instance.IsPlaying && !GameManager.Instance.IsGameOver)
                 {
                     GameManager.Instance.StartGame();
                     SetAnimation(true);
@@ -172,29 +186,59 @@ namespace DuetCats.Scripts.Core
             lastX = cat.position.x;
         }
 
-        // ======================= CAT-NOTE COLLISION =======================
+        //CAT NOTE COLLISION
         void CheckCatNoteCollision(Transform mouthPoint, SkeletonAnimation anim)
         {
+            if (!GameManager.Instance.IsPlaying) return;
+
             Collider2D[] hits = Physics2D.OverlapCircleAll(mouthPoint.position, checkRadius, noteLayer);
+
             foreach (var hit in hits)
             {
                 Note note = hit.GetComponent<Note>();
                 if (note != null)
                 {
-                    int scoreToAdd = note.noteType == NoteType.Normal ? 2 : 5;
+                    note.OnHit();
 
-                    GameManager.Instance.AddScore(scoreToAdd); // đúng chuẩn
+                    if (isWinState) return;
 
-                    // Animation ăn
                     if (anim != null)
                     {
                         anim.AnimationState.SetAnimation(0, "Eating", false);
                         anim.AnimationState.AddAnimation(0, isPlayingAnim ? idlePlaying : idle, true, 0f);
                     }
-
-                    Destroy(hit.gameObject);
                 }
             }
+        }
+
+        public void PlayWinAnimation()
+        {
+            Debug.Log("PLAY WIN ANIM");
+
+            isWinState = true;
+
+            if (leftAnim != null)
+            {
+                leftAnim.AnimationState.ClearTracks();
+                leftAnim.AnimationState.SetAnimation(0, "Cheering_Happy _Victory", true);
+            }
+
+            if (rightAnim != null)
+            {
+                rightAnim.AnimationState.ClearTracks();
+                rightAnim.AnimationState.SetAnimation(0, "Cheering_Happy _Victory", true);
+            }
+        }
+
+        public void PlayLoseAnimation()
+        {
+            SetAnimation(false);
+
+            if (leftAnim != null)
+                leftAnim.AnimationState.SetAnimation(0, "Miss_Object_Lose_2", true);
+
+            if (rightAnim != null)
+                rightAnim.AnimationState.SetAnimation(0, "Miss_Object_Lose_2", true);
         }
 
         void OnDrawGizmosSelected()

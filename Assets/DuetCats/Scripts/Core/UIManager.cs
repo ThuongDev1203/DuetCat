@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Reflection;
 
 namespace DuetCats.Scripts.Core
 {
@@ -9,7 +8,6 @@ namespace DuetCats.Scripts.Core
     {
         public static UIManager Instance;
 
-        [Header("UI References")]
         public TextMeshProUGUI scoreText;
         public Image icon_heart_fill_1;
         public Image icon_heart_fill_2;
@@ -29,17 +27,11 @@ namespace DuetCats.Scripts.Core
 
         public void UpdateLives(int lives)
         {
-            if (icon_heart_fill_1 != null)
-                icon_heart_fill_1.gameObject.SetActive(lives > 0);
+            icon_heart_fill_1.gameObject.SetActive(lives >= 1);
+            icon_heart_fill_2.gameObject.SetActive(lives >= 2);
 
-            if (icon_heart_fill_2 != null)
-                icon_heart_fill_2.gameObject.SetActive(lives > 1);
-
-            if (icon_heart_empty_1 != null)
-                icon_heart_empty_1.gameObject.SetActive(lives == 0);
-
-            if (icon_heart_empty_2 != null)
-                icon_heart_empty_2.gameObject.SetActive(lives < 2);
+            icon_heart_empty_1.gameObject.SetActive(lives < 1);
+            icon_heart_empty_2.gameObject.SetActive(lives < 2);
         }
     }
 }

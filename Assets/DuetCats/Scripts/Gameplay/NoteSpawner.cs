@@ -1,7 +1,5 @@
 using UnityEngine;
-using System.Collections.Generic;
 using DuetCats.Scripts.Data;
-using Cysharp.Threading.Tasks;
 using DuetCats.Scripts.Core;
 
 namespace DuetCats.Scripts.Gameplay
@@ -20,65 +18,64 @@ namespace DuetCats.Scripts.Gameplay
         [Header("Audio")]
         public AudioManager audioManager;
 
-        public float spawnOffset = 1.5f;
+        public float spawnOffset = 0.8f;
 
         private MidiNoteData[] notes;
         private int index = 0;
 
-        private int lastLeftLane = -1;
-        private int lastRightLane = -1;
-
-        private System.Random rand = new System.Random();
+        bool hasSpawnedAll = false;
+        bool hasWon = false;
 
         void Start()
         {
             notes = JSONLoader.Load();
-            audioManager.Play();
         }
 
         void Update()
         {
             if (!GameManager.Instance.IsPlaying) return;
-            if (notes == null || index >= notes.Length) return;
+            if (notes == null) return;
 
             float currentTime = audioManager.GetTime();
-            float threshold = 0.02f;
 
+            //SPAWN TỪNG NOTE (KHÔNG GROUP)
             while (index < notes.Length && notes[index].ta <= currentTime + spawnOffset)
             {
-                float groupTime = notes[index].ta;
-                int startIndex = index;
+                var data = notes[index];
 
-                while (index < notes.Length && Mathf.Abs(notes[index].ta - groupTime) < threshold)
-                    index++;
+                bool isRight = data.n >= 100;
+                int lane = GetLaneFromNote(data);
 
-                SpawnGroup(startIndex, index - startIndex);
+                SpawnSingle(data, isRight, lane);
+
+                index++;
             }
-        }
 
-        void SpawnGroup(int startIndex, int count)
-        {
-            List<MidiNoteData> left = new List<MidiNoteData>();
-            List<MidiNoteData> right = new List<MidiNoteData>();
-
-            for (int i = 0; i < count; i++)
+            //spawn
+            if (!hasSpawnedAll && index >= notes.Length)
             {
-                var data = notes[startIndex + i];
-                if (data.n >= 100) right.Add(data);
-                else left.Add(data);
+                hasSpawnedAll = true;
+                Debug.Log("All notes spawned");
             }
 
-            int leftLane = GetLane(ref lastLeftLane);
-            int rightLane = GetLane(ref lastRightLane);
+            //WIN CONDITION
+            if (hasSpawnedAll
+                && !hasWon
+                && NoteManager.Instance.ActiveNoteCount() == 0
+                && GameManager.Instance.IsPlaying)
+            {
+                hasWon = true;
 
-            SpawnSide(left, false, leftLane);
-            SpawnSide(right, true, rightLane);
+                Debug.Log("🎉 WIN CONDITION MET");
+
+                GameManager.Instance.WinGame();
+            }
         }
 
-        void SpawnSide(List<MidiNoteData> notes, bool isRight, int lane)
-        {
-            if (notes.Count == 0) return;
+        //SPAW
 
+        void SpawnSingle(MidiNoteData data, bool isRight, int lane)
+        {
             Transform start = isRight ? rightStart : leftStart;
             Transform end = isRight ? rightEnd : leftEnd;
 
@@ -94,12 +91,10 @@ namespace DuetCats.Scripts.Gameplay
             Vector3 startPos = ViewportToWorld(x, startY);
             Vector3 endPos = ViewportToWorld(x, endY);
 
-            foreach (var data in notes)
-            {
-                GameObject obj = Instantiate(GetPrefab(data), startPos, Quaternion.identity);
-                var noteComp = obj.GetComponent<Note>();
-                noteComp.Init(data, startPos, endPos, audioManager);
-            }
+            GameObject obj = Instantiate(GetPrefab(data), startPos, Quaternion.identity);
+
+            var noteComp = obj.GetComponent<Note>();
+            noteComp.Init(data, startPos, endPos, audioManager);
         }
 
         Vector3 ViewportToWorld(float x, float y)
@@ -109,15 +104,17 @@ namespace DuetCats.Scripts.Gameplay
             return pos;
         }
 
-        int GetLane(ref int last)
-        {
-            if (last != -1 && rand.NextDouble() < 0.6)
-                return last;
+        //LANE LOGIC
 
-            last = rand.Next(0, 2);
-            return last;
+        int GetLaneFromNote(MidiNoteData d)
+        {
+            if (d.n == 101 || d.n == 98)
+                return 0;
+
+            return 1;
         }
 
+        //PREFAB
         GameObject GetPrefab(MidiNoteData d)
         {
             if (d.id == 50) return lolipop_Long;
