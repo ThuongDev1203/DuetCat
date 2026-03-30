@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuetCats.Scripts.Gameplay.Note
   noteType: 1
+  catType: 1
 --- !u!212 &724864873113096087
 SpriteRenderer:
   serializedVersion: 2

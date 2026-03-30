@@ -1,48 +1,51 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class FingerTap : MonoBehaviour
+namespace DuetCats.Scripts.UI
 {
-    public RectTransform finger;
-    public RectTransform leftButton;
-    public RectTransform rightButton;
-
-    public float moveTime = 0.6f;
-    public float delayTime = 0.3f;
-
-    void Start()
+    public class FingerTap : MonoBehaviour
     {
-        PlayLoop();
-    }
+        public RectTransform finger;
+        public RectTransform leftButton;
+        public RectTransform rightButton;
 
-    void PlayLoop()
-    {
-        Sequence seq = DOTween.Sequence();
+        public float moveTime = 0.6f;
+        public float delayTime = 0.3f;
 
-        seq.Append(finger.DOAnchorPos(leftButton.anchoredPosition, moveTime).SetEase(Ease.InOutSine));
-        seq.AppendInterval(delayTime);
-        seq.AppendCallback(() => TapEffect(leftButton));
+        void Start()
+        {
+            PlayLoop();
+        }
 
-        seq.AppendInterval(0.4f);
+        void PlayLoop()
+        {
+            Sequence seq = DOTween.Sequence();
 
-        seq.Append(finger.DOAnchorPos(rightButton.anchoredPosition, moveTime).SetEase(Ease.InOutSine));
-        seq.AppendInterval(delayTime);
-        seq.AppendCallback(() => TapEffect(rightButton));
+            seq.Append(finger.DOAnchorPos(leftButton.anchoredPosition, moveTime).SetEase(Ease.InOutSine));
+            seq.AppendInterval(delayTime);
+            seq.AppendCallback(() => TapEffect(leftButton));
 
-        seq.AppendInterval(0.5f);
+            seq.AppendInterval(0.4f);
 
-        seq.SetLoops(-1);
-    }
+            seq.Append(finger.DOAnchorPos(rightButton.anchoredPosition, moveTime).SetEase(Ease.InOutSine));
+            seq.AppendInterval(delayTime);
+            seq.AppendCallback(() => TapEffect(rightButton));
 
-    void TapEffect(RectTransform targetButton)
-    {
-        Sequence tap = DOTween.Sequence();
-        tap.Append(finger.DOScale(0.85f, 0.12f));
-        tap.AppendInterval(0.08f);
-        tap.Append(finger.DOScale(1f, 0.2f).SetEase(Ease.OutBack));
+            seq.AppendInterval(0.5f);
 
-        targetButton.DOScale(1.12f, 0.2f)
-            .SetLoops(2, LoopType.Yoyo)
-            .SetEase(Ease.InOutSine);
+            seq.SetLoops(-1);
+        }
+
+        void TapEffect(RectTransform targetButton)
+        {
+            Sequence tap = DOTween.Sequence();
+            tap.Append(finger.DOScale(0.85f, 0.12f));
+            tap.AppendInterval(0.08f);
+            tap.Append(finger.DOScale(1f, 0.2f).SetEase(Ease.OutBack));
+
+            targetButton.DOScale(1.12f, 0.2f)
+                .SetLoops(2, LoopType.Yoyo)
+                .SetEase(Ease.InOutSine);
+        }
     }
 }

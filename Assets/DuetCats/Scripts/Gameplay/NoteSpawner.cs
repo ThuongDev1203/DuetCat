@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using DuetCats.Scripts.Data;
 using DuetCats.Scripts.Core;
 
@@ -19,7 +18,8 @@ namespace DuetCats.Scripts.Gameplay
         [Header("Audio")]
         public AudioManager audioManager;
 
-        public float spawnOffset = 1.2f;
+        [Header("Timing")]
+        public float travelTime = 1.0f;
 
         private MidiNoteData[] notes;
         private int index = 0;
@@ -27,11 +27,12 @@ namespace DuetCats.Scripts.Gameplay
         bool hasSpawnedAll = false;
         bool hasWon = false;
 
-        int maxSpawnPerFrame = 2;
-
         void Start()
         {
             notes = JSONLoader.Load();
+
+            //thứ tự time
+            System.Array.Sort(notes, (a, b) => a.ta.CompareTo(b.ta));
         }
 
         void Update()
@@ -41,49 +42,40 @@ namespace DuetCats.Scripts.Gameplay
 
             float currentTime = audioManager.GetTime();
 
-            int spawnCount = 0;
-
-            while (index < notes.Length && notes[index].ta <= currentTime + spawnOffset)
+            // spawn trước travelTime
+            while (index < notes.Length && notes[index].ta <= currentTime + travelTime)
             {
                 var data = notes[index];
 
-                bool isRight = data.n >= 100;
-                int lane = GetLaneFromNote(data);
+                bool isRight = IsRight(data.n);
+                int lane = GetLane(data.n);
 
-                float delay = Random.Range(0f, 0.08f);
-                StartCoroutine(SpawnWithDelay(data, isRight, lane, delay));
+                SpawnSingle(data, isRight, lane);
 
                 index++;
-                spawnCount++;
-
-                if (spawnCount >= maxSpawnPerFrame)
-                    break;
             }
 
+            // spawn
             if (!hasSpawnedAll && index >= notes.Length)
             {
                 hasSpawnedAll = true;
                 Debug.Log("All notes spawned");
             }
 
+            // WIN
             if (hasSpawnedAll
                 && !hasWon
                 && NoteManager.Instance.ActiveNoteCount() == 0
                 && GameManager.Instance.IsPlaying)
             {
                 hasWon = true;
+
                 Debug.Log("🎉 WIN CONDITION MET");
                 GameManager.Instance.WinGame();
             }
         }
 
         //SPAWN
-
-        IEnumerator SpawnWithDelay(MidiNoteData data, bool isRight, int lane, float delay)
-        {
-            yield return new WaitForSeconds(delay);
-            SpawnSingle(data, isRight, lane);
-        }
 
         void SpawnSingle(MidiNoteData data, bool isRight, int lane)
         {
@@ -115,9 +107,17 @@ namespace DuetCats.Scripts.Gameplay
             return pos;
         }
 
-        int GetLaneFromNote(MidiNoteData d)
+        //SIDE
+        bool IsRight(int n)
         {
-            if (d.n == 101 || d.n == 98)
+            return (n == 101 || n == 99);
+        }
+
+        //LANE
+
+        int GetLane(int n)
+        {
+            if (n == 101 || n == 98)
                 return 0;
 
             return 1;
@@ -132,10 +132,24 @@ namespace DuetCats.Scripts.Gameplay
             bool strong = d.v >= 120;
             bool isLong = d.d > 0.2f;
 
-            if (d.n >= 100)
+            if (IsRight(d.n))
                 return isLong ? candy1_Long : strong ? candy1_Strong : candy1_Normal;
             else
                 return isLong ? candy2_Long : strong ? candy2_Strong : candy2_Normal;
+        }
+
+        //RESET
+
+        public void ResetSpawner()
+        {
+            index = 0;
+            hasSpawnedAll = false;
+            hasWon = false;
+
+            foreach (var note in FindObjectsByType<Note>(FindObjectsSortMode.None))
+            {
+                Destroy(note.gameObject);
+            }
         }
     }
 }

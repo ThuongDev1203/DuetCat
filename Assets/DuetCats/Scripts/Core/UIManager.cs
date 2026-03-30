@@ -9,28 +9,39 @@ namespace DuetCats.Scripts.Core
     {
         public static UIManager Instance;
 
-        [Header("Score & Lives UI")]
-        public TextMeshProUGUI scoreText;
-        public Image icon_heart_fill_1;
-        public Image icon_heart_fill_2;
-        public Image icon_heart_empty_1;
-        public Image icon_heart_empty_2;
+        // SCORE
+        [Header("Score Texts (Portrait + Landscape)")]
+        public TextMeshProUGUI[] scoreTexts;
 
-        [Header("Panel References")]
-        public CanvasGroup tutorialGroup;
-        public CanvasGroup startButtonGroup;
-        public CanvasGroup gameUIGroup;
+        // LIVES
+        [Header("Lives Icons (Portrait + Landscape)")]
+        public Image[] heartFill1;
+        public Image[] heartFill2;
+        public Image[] heartEmpty1;
+        public Image[] heartEmpty2;
 
-        [Header("GameUI")]
+        // PANELS
+        [Header("Panels (Portrait + Landscape)")]
+        public CanvasGroup[] tutorialGroups;
+        public CanvasGroup[] startButtonGroups;
+        public CanvasGroup[] gameUIGroups;
+
+        [Header("Game Root")]
         public GameObject gameUI;
 
-
+        // STATE
         bool isTutorialShowing = false;
         bool canClickTutorial = false;
+
 
         void Awake()
         {
             Instance = this;
+        }
+
+        void Start()
+        {
+            ShowStartUI();
         }
 
         void Update()
@@ -44,27 +55,52 @@ namespace DuetCats.Scripts.Core
             }
         }
 
+        // SCORE
         public void UpdateScore(int score)
         {
-            if (scoreText != null)
-                scoreText.text = score.ToString();
+            foreach (var txt in scoreTexts)
+            {
+                if (txt != null)
+                    txt.text = score.ToString();
+            }
         }
 
+        // LIVES (SAFE)
         public void UpdateLives(int lives)
         {
-            icon_heart_fill_1.gameObject.SetActive(lives >= 1);
-            icon_heart_fill_2.gameObject.SetActive(lives >= 2);
+            int count = Mathf.Min(
+                heartFill1.Length,
+                heartFill2.Length,
+                heartEmpty1.Length,
+                heartEmpty2.Length
+            );
 
-            icon_heart_empty_1.gameObject.SetActive(lives < 1);
-            icon_heart_empty_2.gameObject.SetActive(lives < 2);
+            for (int i = 0; i < count; i++)
+            {
+                if (heartFill1[i] != null)
+                    heartFill1[i].gameObject.SetActive(lives >= 1);
+
+                if (heartFill2[i] != null)
+                    heartFill2[i].gameObject.SetActive(lives >= 2);
+
+                if (heartEmpty1[i] != null)
+                    heartEmpty1[i].gameObject.SetActive(lives < 1);
+
+                if (heartEmpty2[i] != null)
+                    heartEmpty2[i].gameObject.SetActive(lives < 2);
+            }
         }
 
+        // FLOW
+        //Click Start
         public void OnClickStart()
         {
-            gameUI.SetActive(true);
+            if (gameUI != null)
+                gameUI.SetActive(true);
 
-            ShowCanvasGroup(tutorialGroup, true);
-            ShowCanvasGroup(startButtonGroup, false);
+            ShowGroups(startButtonGroups, false);
+            ShowGroups(tutorialGroups, true);
+            ShowGroups(gameUIGroups, false);
 
             isTutorialShowing = true;
 
@@ -74,36 +110,48 @@ namespace DuetCats.Scripts.Core
         IEnumerator DelayEnableClick()
         {
             yield return null;
-
             canClickTutorial = true;
         }
 
+        //Click screen after tutorial
         void StartFromTutorial()
         {
             isTutorialShowing = false;
 
-            ShowCanvasGroup(tutorialGroup, false);
-            ShowCanvasGroup(gameUIGroup, true);
+            ShowGroups(tutorialGroups, false);
+            ShowGroups(gameUIGroups, true);
 
             GameManager.Instance.StartGame();
             InputController.Instance.StartAfterTutorial();
         }
 
+        //Reset UI (Game Over)
         public void ShowStartUI()
         {
-            ShowCanvasGroup(startButtonGroup, true);
-            ShowCanvasGroup(tutorialGroup, false);
+            ShowGroups(startButtonGroups, true);
+            ShowGroups(tutorialGroups, false);
+            ShowGroups(gameUIGroups, false);
 
             if (gameUI != null)
                 gameUI.SetActive(false);
+
+            isTutorialShowing = false;
+            canClickTutorial = false;
         }
 
-
-        void ShowCanvasGroup(CanvasGroup cg, bool show)
+        // HELPER (SAFE)
+        void ShowGroups(CanvasGroup[] groups, bool show)
         {
-            cg.alpha = show ? 1 : 0;
-            cg.interactable = show;
-            cg.blocksRaycasts = show;
+            if (groups == null) return;
+
+            foreach (var cg in groups)
+            {
+                if (cg == null) continue;
+
+                cg.alpha = show ? 1 : 0;
+                cg.interactable = show;
+                cg.blocksRaycasts = show;
+            }
         }
     }
 }

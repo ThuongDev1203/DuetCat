@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1090c027d2c462b4584593fa0eadd442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DuetCats.Scripts.Gameplay.Note
+  noteType: 0
+  catType: 1
 --- !u!212 &724864873113096087
 SpriteRenderer:
   serializedVersion: 2

@@ -92,12 +92,6 @@ namespace DuetCats.Scripts.Core
                 CheckCatNoteCollision(leftMouthPoint, leftAnim);
                 CheckCatNoteCollision(rightMouthPoint, rightAnim);
             }
-
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                Debug.Log("TEST WIN ANIM");
-                PlayWinAnimation();
-            }
         }
 
         public void StartAfterTutorial()
@@ -108,11 +102,24 @@ namespace DuetCats.Scripts.Core
 
         public void ResetInput()
         {
-            canControl = false;
             isWinState = false;
+            isPlayingAnim = false;
+
+            ResetSpine(leftAnim);
+            ResetSpine(rightAnim);
 
             SetAnimation(false);
         }
+
+        void ResetSpine(SkeletonAnimation anim)
+        {
+            if (anim == null) return;
+            anim.AnimationState.ClearTracks();
+            anim.Skeleton.SetToSetupPose();
+            anim.transform.localRotation = Quaternion.identity;
+            anim.AnimationState.SetAnimation(0, "Idle_Start", true);
+        }
+
 
         //TAIL HELPER
         void PlayTailLoop(SkeletonAnimation tailAnim, string animName)
@@ -254,10 +261,10 @@ namespace DuetCats.Scripts.Core
             SetAnimation(false);
 
             if (leftAnim != null)
-                leftAnim.AnimationState.SetAnimation(0, "Miss_Object_Lose_2", true);
+                leftAnim.AnimationState.SetAnimation(0, "Miss_Object_Lose_2", false);
 
             if (rightAnim != null)
-                rightAnim.AnimationState.SetAnimation(0, "Miss_Object_Lose_2", true);
+                rightAnim.AnimationState.SetAnimation(0, "Miss_Object_Lose_2", false);
         }
 
         void OnDrawGizmosSelected()

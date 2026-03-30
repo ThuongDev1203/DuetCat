@@ -7,6 +7,7 @@ namespace DuetCats.Scripts.Core
         public static AudioManager Instance;
 
         public AudioSource audioSource;
+        [SerializeField] float startOffset = 0.1f;
 
         void Awake()
         {
@@ -15,7 +16,7 @@ namespace DuetCats.Scripts.Core
 
         public void Play()
         {
-            audioSource.time = 0.1f;
+            audioSource.time = startOffset;
             audioSource.Play();
         }
 
@@ -27,7 +28,13 @@ namespace DuetCats.Scripts.Core
 
         public float GetTime()
         {
-            return audioSource.time;
+            return audioSource != null ? audioSource.time : 0f;
+        }
+
+        public void ResetTime()
+        {
+            audioSource.Stop();
+            audioSource.time = 0.1f;
         }
     }
 }

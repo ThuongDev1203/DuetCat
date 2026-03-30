@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using DuetCats.Scripts.Gameplay;
 
 namespace DuetCats.Scripts.Core
 {
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
+        public NoteSpawner spawner;
 
         public bool IsPlaying { get; private set; } = false;
         public bool IsGameOver { get; private set; } = false;
@@ -55,6 +57,12 @@ namespace DuetCats.Scripts.Core
             yield return new WaitForSeconds(1.5f);
 
             UIManager.Instance.ShowStartUI();
+
+            audioManager.ResetTime();
+
+            if (spawner != null)
+                spawner.ResetSpawner();
+
             ResetGameState();
         }
 

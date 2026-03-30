@@ -8,6 +8,7 @@ namespace DuetCats.Scripts.Gameplay
     public class Note : MonoBehaviour
     {
         public NoteType noteType;
+        public CatType catType;
 
         private MidiNoteData data;
         private Vector3 startPos;
@@ -16,6 +17,7 @@ namespace DuetCats.Scripts.Gameplay
 
         private bool isHandled = false;
         private float hitTime;
+        private bool isHit = false;
 
         public void Init(MidiNoteData data, Vector3 startPos, Vector3 endPos, AudioManager audioManager)
         {
@@ -83,6 +85,9 @@ namespace DuetCats.Scripts.Gameplay
             if (!GameManager.Instance.IsPlaying) return;
 
             isHandled = true;
+
+            if (isHit) return;
+            isHit = true;
 
             NoteManager.Instance.Hit(this);
 

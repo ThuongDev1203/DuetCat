@@ -13,6 +13,11 @@ namespace DuetCats.Scripts.Core
         public float perfect = 0.07f;
         public float good = 0.15f;
 
+        [Header("floating text")]
+        public GameObject floatingTextPrefab;
+        public Transform leftCanvas;
+        public Transform rightCanvas;
+
         int combo = 0;
 
         void Awake()
@@ -36,10 +41,26 @@ namespace DuetCats.Scripts.Core
 
         public void Hit(Note note)
         {
+            if (note == null) return;
+
             combo++;
 
             int score = GetScore(note.noteType);
             GameManager.Instance.AddScore(score);
+
+            Transform targetCanvas = note.catType == CatType.Left
+                ? leftCanvas
+                : rightCanvas;
+
+            GameObject txt = Instantiate(floatingTextPrefab, targetCanvas);
+
+            RectTransform rt = txt.GetComponent<RectTransform>();
+
+            rt.localPosition = new Vector3(0, 50f, 0);
+
+            Vector3 scale = rt.localScale;
+            scale.x = Mathf.Abs(scale.x);
+            rt.localScale = scale;
 
             Remove(note);
         }
