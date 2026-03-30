@@ -3,10 +3,10 @@
 A minimal playable version of *Duet Cats*, built for the Playable Ads Developer case study.
 
 ## 🔗 Playable Build
-👉 [Play here](YOUR_WEB_LINK)
+👉 [Play here]([YOUR_WEB_LINK](https://thuonggamedev.itch.io/duet-cats))
 
 ## 📦 Repository
-👉 [GitHub Repo]((https://github.com/ThuongDev1203/DuetCat.git))
+👉 [GitHub Repo]([YOUR_WEB_LINK](https://github.com/ThuongDev1203/DuetCat.git))
 
 ---
 
