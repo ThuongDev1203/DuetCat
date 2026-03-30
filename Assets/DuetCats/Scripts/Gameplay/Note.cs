@@ -1,5 +1,4 @@
 using UnityEngine;
-using Cysharp.Threading.Tasks;
 using DuetCats.Scripts.Data;
 using DuetCats.Scripts.Core;
 
@@ -18,6 +17,7 @@ namespace DuetCats.Scripts.Gameplay
         private bool isHandled = false;
         private float hitTime;
         private bool isHit = false;
+        private float spawnTime;
 
         public void Init(MidiNoteData data, Vector3 startPos, Vector3 endPos, AudioManager audioManager)
         {
@@ -27,55 +27,46 @@ namespace DuetCats.Scripts.Gameplay
             this.audioManager = audioManager;
 
             hitTime = data.ta;
+            spawnTime = audioManager.GetTime();
 
             NoteManager.Instance.Register(this);
-
-            MoveNoteAsync().Forget();
         }
 
-        private async UniTaskVoid MoveNoteAsync()
+        private void Update()
         {
-            float spawnTime = audioManager.GetTime();
+            if (this == null) return;
 
-            while (true)
+            if (!GameManager.Instance.IsPlaying)
             {
-                if (this == null) return;
-
-                if (!GameManager.Instance.IsPlaying)
+                if (!isHandled)
                 {
-                    if (!isHandled)
-                    {
-                        NoteManager.Instance.Remove(this);
-                    }
-
-                    Destroy(gameObject);
-                    return;
+                    NoteManager.Instance.Remove(this);
                 }
 
-                if (isHandled)
-                {
-                    Destroy(gameObject);
-                    return;
-                }
+                Destroy(gameObject);
+                return;
+            }
 
-                float currentTime = audioManager.GetTime();
+            if (isHandled)
+            {
+                Destroy(gameObject);
+                return;
+            }
 
-                float t = Mathf.Clamp01((currentTime - spawnTime) / (hitTime - spawnTime));
-                transform.position = Vector3.Lerp(startPos, endPos, t);
+            float currentTime = audioManager.GetTime();
 
-                // MISS
-                if (currentTime > hitTime + NoteManager.Instance.good)
-                {
-                    isHandled = true;
+            float t = Mathf.Clamp01((currentTime - spawnTime) / (hitTime - spawnTime));
+            transform.position = Vector3.Lerp(startPos, endPos, t);
 
-                    Debug.Log("MISS by time");
+            // MISS
+            if (currentTime > hitTime + NoteManager.Instance.good)
+            {
+                isHandled = true;
 
-                    NoteManager.Instance.Miss(this);
-                    Destroy(gameObject);
-                    return;
-                }
+                Debug.Log("MISS by time");
 
-                await UniTask.Yield();
+                NoteManager.Instance.Miss(this);
+                Destroy(gameObject);
             }
         }
 

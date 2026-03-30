@@ -24,54 +24,54 @@ namespace DuetCats.Scripts.Core
         public SkeletonAnimation leftTailAnim;
         public SkeletonAnimation rightTailAnim;
 
-        string idle = "Idle_Start";
-        string idlePlaying = "Idle_Playing";
-        bool isPlayingAnim = false;
-        bool isWinState = false;
+        string _idle = "Idle_Start";
+        string _idlePlaying = "Idle_Playing";
+        bool _isPlayingAnim = false;
+        bool _isWinState = false;
 
         [Header("Smooth Movement")]
         public float smoothTime = 0.05f;
         public float maxSpeed = 25f;
 
         [Header("Lane Boundary")]
-        [SerializeField] float leftMinVX = 0.15f;
-        [SerializeField] float leftMaxVX = 0.35f;
-        [SerializeField] float rightMinVX = 0.65f;
-        [SerializeField] float rightMaxVX = 0.85f;
+        [SerializeField] float _leftMinVX = 0.15f;
+        [SerializeField] float _leftMaxVX = 0.35f;
+        [SerializeField] float _rightMinVX = 0.65f;
+        [SerializeField] float _rightMaxVX = 0.85f;
 
-        Camera cam;
-        float zDepth;
-        float worldLeftMin, worldLeftMax, worldRightMin, worldRightMax;
-        Vector3 velocityLeft, velocityRight;
-        float lastLeftX, lastRightX;
+        Camera _cam;
+        float _zDepth;
+        float _worldLeftMin, _worldLeftMax, _worldRightMin, _worldRightMax;
+        Vector3 _velocityLeft, _velocityRight;
+        float _lastLeftX, _lastRightX;
 
         class TouchData { public bool isLeft; }
         Dictionary<int, TouchData> touches = new Dictionary<int, TouchData>();
-        bool mouseLeft;
+        bool _mouseLeft;
 
         [Header("Collision Check")]
-        public float checkRadius = 0.2f;
+        public float checkRadius = 0.1f;
         public LayerMask noteLayer;
 
         //Can Control
-        bool canControl = false;
+        bool _canControl = false;
 
         void Awake()
         {
             Instance = this;
-            cam = Camera.main;
-            zDepth = Mathf.Abs(cam.transform.position.z);
+            _cam = Camera.main;
+            _zDepth = Mathf.Abs(_cam.transform.position.z);
         }
 
         void Start()
         {
-            worldLeftMin = cam.ViewportToWorldPoint(new Vector3(leftMinVX, 0, zDepth)).x;
-            worldLeftMax = cam.ViewportToWorldPoint(new Vector3(leftMaxVX, 0, zDepth)).x;
-            worldRightMin = cam.ViewportToWorldPoint(new Vector3(rightMinVX, 0, zDepth)).x;
-            worldRightMax = cam.ViewportToWorldPoint(new Vector3(rightMaxVX, 0, zDepth)).x;
+            _worldLeftMin = _cam.ViewportToWorldPoint(new Vector3(_leftMinVX, 0, _zDepth)).x;
+            _worldLeftMax = _cam.ViewportToWorldPoint(new Vector3(_leftMaxVX, 0, _zDepth)).x;
+            _worldRightMin = _cam.ViewportToWorldPoint(new Vector3(_rightMinVX, 0, _zDepth)).x;
+            _worldRightMax = _cam.ViewportToWorldPoint(new Vector3(_rightMaxVX, 0, _zDepth)).x;
 
-            lastLeftX = leftCat.position.x;
-            lastRightX = rightCat.position.x;
+            _lastLeftX = leftCat.position.x;
+            _lastRightX = rightCat.position.x;
 
             SetAnimation(false);
 
@@ -82,7 +82,7 @@ namespace DuetCats.Scripts.Core
 
         void Update()
         {
-            if (!canControl) return;
+            if (!_canControl) return;
 
             HandleTouch();
             HandleMouse();
@@ -96,14 +96,14 @@ namespace DuetCats.Scripts.Core
 
         public void StartAfterTutorial()
         {
-            canControl = true;
+            _canControl = true;
             SetAnimation(true);
         }
 
         public void ResetInput()
         {
-            isWinState = false;
-            isPlayingAnim = false;
+            _isWinState = false;
+            _isPlayingAnim = false;
 
             ResetSpine(leftAnim);
             ResetSpine(rightAnim);
@@ -132,12 +132,12 @@ namespace DuetCats.Scripts.Core
 
         void SetAnimation(bool playing)
         {
-            if (GameManager.Instance.IsGameOver || isWinState) return;
+            if (GameManager.Instance.IsGameOver || _isWinState) return;
 
-            if (isPlayingAnim == playing) return;
-            isPlayingAnim = playing;
+            if (_isPlayingAnim == playing) return;
+            _isPlayingAnim = playing;
 
-            string anim = playing ? idlePlaying : idle;
+            string anim = playing ? _idlePlaying : _idle;
 
             if (leftAnim.Skeleton.Data.FindAnimation(anim) != null)
                 leftAnim.AnimationState.SetAnimation(0, anim, true); // track 0
@@ -180,7 +180,7 @@ namespace DuetCats.Scripts.Core
 
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
-                mouseLeft = pos.x / Screen.width < 0.5f;
+                _mouseLeft = pos.x / Screen.width < 0.5f;
                 // if (!GameManager.Instance.IsPlaying && !GameManager.Instance.IsGameOver)
                 // {
                 //     GameManager.Instance.StartGame();
@@ -189,14 +189,14 @@ namespace DuetCats.Scripts.Core
             }
 
             if (Mouse.current.leftButton.isPressed)
-                MoveByScreen(pos, mouseLeft);
+                MoveByScreen(pos, _mouseLeft);
         }
 
         void MoveByScreen(Vector2 screenPos, bool isLeft)
         {
-            Vector3 world = cam.ScreenToWorldPoint(new Vector3(screenPos.x, Screen.height * 0.5f, zDepth));
-            if (isLeft) SmoothMove(leftCat, ref velocityLeft, ref lastLeftX, worldLeftMin, worldLeftMax, world.x);
-            else SmoothMove(rightCat, ref velocityRight, ref lastRightX, worldRightMin, worldRightMax, world.x);
+            Vector3 world = _cam.ScreenToWorldPoint(new Vector3(screenPos.x, Screen.height * 0.5f, _zDepth));
+            if (isLeft) SmoothMove(leftCat, ref _velocityLeft, ref _lastLeftX, _worldLeftMin, _worldLeftMax, world.x);
+            else SmoothMove(rightCat, ref _velocityRight, ref _lastRightX, _worldRightMin, _worldRightMax, world.x);
         }
 
         void SmoothMove(Transform cat, ref Vector3 velocity, ref float lastX, float min, float max, float targetX)
@@ -226,12 +226,12 @@ namespace DuetCats.Scripts.Core
                 {
                     note.OnHit();
 
-                    if (isWinState) return;
+                    if (_isWinState) return;
 
                     if (anim != null)
                     {
                         anim.AnimationState.SetAnimation(0, "Eating", false);
-                        anim.AnimationState.AddAnimation(0, isPlayingAnim ? idlePlaying : idle, true, 0f);
+                        anim.AnimationState.AddAnimation(0, _isPlayingAnim ? _idlePlaying : _idle, true, 0f);
                     }
                 }
             }
@@ -241,7 +241,7 @@ namespace DuetCats.Scripts.Core
         {
             Debug.Log("PLAY WIN ANIM");
 
-            isWinState = true;
+            _isWinState = true;
 
             if (leftAnim != null)
             {

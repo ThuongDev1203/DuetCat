@@ -7,14 +7,17 @@ namespace DuetCats.Scripts.Core
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
+
         public NoteSpawner spawner;
-
-        public bool IsPlaying { get; private set; } = false;
-        public bool IsGameOver { get; private set; } = false;
-
-        public int Score { get; private set; } = 0;
-        public int Lives { get; private set; } = 2;
         public AudioManager audioManager;
+
+        public bool IsPlaying { get; private set; }
+        public bool IsGameOver { get; private set; }
+
+        public int Score { get; private set; }
+        public int Lives { get; private set; }
+
+        const int MAX_LIVES = 2;
 
         void Awake()
         {
@@ -29,24 +32,22 @@ namespace DuetCats.Scripts.Core
             IsGameOver = false;
 
             Score = 0;
-            Lives = 2;
+            Lives = MAX_LIVES;
 
             UIManager.Instance.UpdateScore(Score);
             UIManager.Instance.UpdateLives(Lives);
 
-            Debug.Log("GAME START");
-
-            if (audioManager != null)
-                audioManager.Play();
+            audioManager?.Play();
         }
 
         public void StopGame()
         {
+            if (IsGameOver) return;
+
             IsPlaying = false;
             IsGameOver = true;
 
-            if (audioManager != null)
-                audioManager.audioSource.Stop();
+            audioManager?.audioSource.Stop();
 
             InputController.Instance?.PlayLoseAnimation();
             StartCoroutine(DelayReset());
@@ -58,10 +59,8 @@ namespace DuetCats.Scripts.Core
 
             UIManager.Instance.ShowStartUI();
 
-            audioManager.ResetTime();
-
-            if (spawner != null)
-                spawner.ResetSpawner();
+            audioManager?.ResetTime();
+            spawner?.ResetSpawner();
 
             ResetGameState();
         }
@@ -69,7 +68,7 @@ namespace DuetCats.Scripts.Core
         void ResetGameState()
         {
             Score = 0;
-            Lives = 2;
+            Lives = MAX_LIVES;
 
             UIManager.Instance.UpdateScore(Score);
             UIManager.Instance.UpdateLives(Lives);
@@ -77,16 +76,31 @@ namespace DuetCats.Scripts.Core
             InputController.Instance.ResetInput();
         }
 
-        //SCORE LIVES
+        //================ SCORE =================
         public void AddScore(int amount)
         {
             Score += amount;
             UIManager.Instance.UpdateScore(Score);
         }
 
+        //================ LIFE =================
+        public void LoseLife()
+        {
+            if (IsGameOver) return;
+
+            Lives = Mathf.Max(0, Lives - 1);
+
+            UIManager.Instance.UpdateLives(Lives);
+
+            if (Lives == 0)
+                StopGame();
+        }
+
+        //================ WIN =================
         public void WinGame()
         {
-            Debug.Log("WIN GAME CALLED");
+            if (IsGameOver) return;
+
             IsPlaying = false;
             StartCoroutine(WinDelay());
         }
@@ -94,25 +108,12 @@ namespace DuetCats.Scripts.Core
         IEnumerator WinDelay()
         {
             yield return null;
+
             IsGameOver = true;
-            audioManager.Stop();
+            audioManager?.Stop();
+
             InputController.Instance.PlayWinAnimation();
-        }
-
-        public void LoseLife()
-        {
-            Lives--;
-            if (Lives < 0) Lives = 0;
-
-            Debug.Log("LoseLife → Lives = " + Lives);
-
-            UIManager.Instance.UpdateLives(Lives);
-
-            if (Lives == 0)
-            {
-                StopGame();
-                Debug.Log("GAME OVER");
-            }
+            StartCoroutine(DelayReset());
         }
     }
 }

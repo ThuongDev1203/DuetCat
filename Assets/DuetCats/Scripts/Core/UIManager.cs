@@ -10,18 +10,16 @@ namespace DuetCats.Scripts.Core
         public static UIManager Instance;
 
         // SCORE
-        [Header("Score Texts (Portrait + Landscape)")]
+        [Header("Score Texts")]
         public TextMeshProUGUI[] scoreTexts;
 
-        // LIVES
-        [Header("Lives Icons (Portrait + Landscape)")]
-        public Image[] heartFill1;
-        public Image[] heartFill2;
-        public Image[] heartEmpty1;
-        public Image[] heartEmpty2;
+        // LIVES (OPTIMIZED)
+        [Header("Lives")]
+        public Image[] heartFills;
+        public Image[] heartEmpties;
 
         // PANELS
-        [Header("Panels (Portrait + Landscape)")]
+        [Header("Panels")]
         public CanvasGroup[] tutorialGroups;
         public CanvasGroup[] startButtonGroups;
         public CanvasGroup[] gameUIGroups;
@@ -32,7 +30,6 @@ namespace DuetCats.Scripts.Core
         // STATE
         bool isTutorialShowing = false;
         bool canClickTutorial = false;
-
 
         void Awake()
         {
@@ -46,8 +43,7 @@ namespace DuetCats.Scripts.Core
 
         void Update()
         {
-            if (!isTutorialShowing) return;
-            if (!canClickTutorial) return;
+            if (!isTutorialShowing || !canClickTutorial) return;
 
             if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
             {
@@ -55,44 +51,34 @@ namespace DuetCats.Scripts.Core
             }
         }
 
-        // SCORE
+        //================ SCORE =================
         public void UpdateScore(int score)
         {
-            foreach (var txt in scoreTexts)
+            for (int i = 0; i < scoreTexts.Length; i++)
             {
-                if (txt != null)
-                    txt.text = score.ToString();
+                if (scoreTexts[i] != null)
+                    scoreTexts[i].text = score.ToString();
             }
         }
 
-        // LIVES (SAFE)
+        //================ LIVES =================
         public void UpdateLives(int lives)
         {
-            int count = Mathf.Min(
-                heartFill1.Length,
-                heartFill2.Length,
-                heartEmpty1.Length,
-                heartEmpty2.Length
-            );
+            int count = Mathf.Min(heartFills.Length, heartEmpties.Length);
 
             for (int i = 0; i < count; i++)
             {
-                if (heartFill1[i] != null)
-                    heartFill1[i].gameObject.SetActive(lives >= 1);
+                bool isAlive = i < lives;
 
-                if (heartFill2[i] != null)
-                    heartFill2[i].gameObject.SetActive(lives >= 2);
+                if (heartFills[i] != null)
+                    heartFills[i].gameObject.SetActive(isAlive);
 
-                if (heartEmpty1[i] != null)
-                    heartEmpty1[i].gameObject.SetActive(lives < 1);
-
-                if (heartEmpty2[i] != null)
-                    heartEmpty2[i].gameObject.SetActive(lives < 2);
+                if (heartEmpties[i] != null)
+                    heartEmpties[i].gameObject.SetActive(!isAlive);
             }
         }
 
-        // FLOW
-        //Click Start
+        //================ FLOW =================
         public void OnClickStart()
         {
             if (gameUI != null)
@@ -103,7 +89,6 @@ namespace DuetCats.Scripts.Core
             ShowGroups(gameUIGroups, false);
 
             isTutorialShowing = true;
-
             StartCoroutine(DelayEnableClick());
         }
 
@@ -113,7 +98,6 @@ namespace DuetCats.Scripts.Core
             canClickTutorial = true;
         }
 
-        //Click screen after tutorial
         void StartFromTutorial()
         {
             isTutorialShowing = false;
@@ -125,7 +109,6 @@ namespace DuetCats.Scripts.Core
             InputController.Instance.StartAfterTutorial();
         }
 
-        //Reset UI (Game Over)
         public void ShowStartUI()
         {
             ShowGroups(startButtonGroups, true);
@@ -139,13 +122,14 @@ namespace DuetCats.Scripts.Core
             canClickTutorial = false;
         }
 
-        // HELPER (SAFE)
+        //================ HELPER =================
         void ShowGroups(CanvasGroup[] groups, bool show)
         {
             if (groups == null) return;
 
-            foreach (var cg in groups)
+            for (int i = 0; i < groups.Length; i++)
             {
+                var cg = groups[i];
                 if (cg == null) continue;
 
                 cg.alpha = show ? 1 : 0;

@@ -18,7 +18,7 @@ namespace DuetCats.Scripts.Core
         public Transform leftCanvas;
         public Transform rightCanvas;
 
-        int combo = 0;
+        int _combo = 0;
 
         void Awake()
         {
@@ -43,7 +43,7 @@ namespace DuetCats.Scripts.Core
         {
             if (note == null) return;
 
-            combo++;
+            _combo++;
 
             int score = GetScore(note.noteType);
             GameManager.Instance.AddScore(score);
@@ -85,7 +85,7 @@ namespace DuetCats.Scripts.Core
 
         public void Miss(Note note)
         {
-            combo = 0;
+            _combo = 0;
 
             Debug.Log("MISS");
 
