@@ -30,8 +30,6 @@ namespace DuetCats.Scripts.Gameplay
         void Start()
         {
             notes = JSONLoader.Load();
-
-            //thứ tự time
             System.Array.Sort(notes, (a, b) => a.ta.CompareTo(b.ta));
         }
 
@@ -42,7 +40,6 @@ namespace DuetCats.Scripts.Gameplay
 
             float currentTime = audioManager.GetTime();
 
-            // spawn trước travelTime
             while (index < notes.Length && notes[index].ta <= currentTime + travelTime)
             {
                 var data = notes[index];
@@ -55,30 +52,30 @@ namespace DuetCats.Scripts.Gameplay
                 index++;
             }
 
-            // spawn
             if (!hasSpawnedAll && index >= notes.Length)
             {
                 hasSpawnedAll = true;
                 Debug.Log("All notes spawned");
             }
 
-            // WIN
             if (hasSpawnedAll
                 && !hasWon
                 && NoteManager.Instance.ActiveNoteCount() == 0
                 && GameManager.Instance.IsPlaying)
             {
                 hasWon = true;
-
-                Debug.Log("🎉 WIN CONDITION MET");
                 GameManager.Instance.WinGame();
             }
         }
 
-        //SPAWN
-
         void SpawnSingle(MidiNoteData data, bool isRight, int lane)
         {
+            if (Camera.main == null)
+            {
+                Debug.LogError("Main Camera NULL!");
+                return;
+            }
+
             Transform start = isRight ? rightStart : leftStart;
             Transform end = isRight ? rightEnd : leftEnd;
 
@@ -94,10 +91,33 @@ namespace DuetCats.Scripts.Gameplay
             Vector3 startPos = ViewportToWorld(x, startY);
             Vector3 endPos = ViewportToWorld(x, endY);
 
-            GameObject obj = Instantiate(GetPrefab(data), startPos, Quaternion.identity);
+            GameObject prefab = GetPrefab(data);
+
+            if (prefab == null)
+            {
+                Debug.LogError("Prefab NULL!");
+                return;
+            }
+
+            if (NotePool.Instance == null)
+            {
+                Debug.LogError("NotePool chưa có trong scene!");
+                return;
+            }
+
+            GameObject obj = NotePool.Instance.Get(prefab, startPos, Quaternion.identity);
+
+            if (obj == null) return;
 
             var noteComp = obj.GetComponent<Note>();
-            noteComp.Init(data, startPos, endPos, audioManager);
+
+            if (noteComp == null)
+            {
+                Debug.LogError("Prefab thiếu script Note!");
+                return;
+            }
+
+            noteComp.Init(data, startPos, endPos, audioManager, prefab);
         }
 
         Vector3 ViewportToWorld(float x, float y)
@@ -107,13 +127,10 @@ namespace DuetCats.Scripts.Gameplay
             return pos;
         }
 
-        //SIDE
         bool IsRight(int n)
         {
             return (n == 101 || n == 99);
         }
-
-        //LANE
 
         int GetLane(int n)
         {
@@ -122,8 +139,6 @@ namespace DuetCats.Scripts.Gameplay
 
             return 1;
         }
-
-        //PREFAB
 
         GameObject GetPrefab(MidiNoteData d)
         {
@@ -138,8 +153,6 @@ namespace DuetCats.Scripts.Gameplay
                 return isLong ? candy2_Long : strong ? candy2_Strong : candy2_Normal;
         }
 
-        //RESET
-
         public void ResetSpawner()
         {
             index = 0;
@@ -148,7 +161,7 @@ namespace DuetCats.Scripts.Gameplay
 
             foreach (var note in FindObjectsByType<Note>(FindObjectsSortMode.None))
             {
-                Destroy(note.gameObject);
+                note.gameObject.SetActive(false);
             }
         }
     }

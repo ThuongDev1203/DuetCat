@@ -8,72 +8,67 @@ namespace DuetCats.Scripts.Gameplay
     {
         public NoteType noteType;
         public CatType catType;
-
+        private GameObject prefabRef;
         private MidiNoteData data;
         private Vector3 startPos;
         private Vector3 endPos;
         private AudioManager audioManager;
 
-        private bool isHandled = false;
+        private bool isHandled;
+        private bool isHit;
         private float hitTime;
-        private bool isHit = false;
         private float spawnTime;
 
-        public void Init(MidiNoteData data, Vector3 startPos, Vector3 endPos, AudioManager audioManager)
+        public void Init(MidiNoteData data, Vector3 startPos, Vector3 endPos, AudioManager audioManager, GameObject prefab)
         {
             this.data = data;
             this.startPos = startPos;
             this.endPos = endPos;
             this.audioManager = audioManager;
+            this.prefabRef = prefab;
 
             hitTime = data.ta;
             spawnTime = audioManager.GetTime();
+
+            isHandled = false;
+            isHit = false;
 
             NoteManager.Instance.Register(this);
         }
 
         private void Update()
         {
-            if (this == null) return;
-
             if (!GameManager.Instance.IsPlaying)
             {
-                if (!isHandled)
-                {
-                    NoteManager.Instance.Remove(this);
-                }
-
-                Destroy(gameObject);
+                ReturnToPool();
                 return;
             }
 
             if (isHandled)
             {
-                Destroy(gameObject);
+                ReturnToPool();
                 return;
             }
 
             float currentTime = audioManager.GetTime();
 
-            float t = Mathf.Clamp01((currentTime - spawnTime) / (hitTime - spawnTime));
+            float duration = hitTime - spawnTime;
+            if (duration <= 0.001f) duration = 0.001f;
+
+            float t = Mathf.Clamp01((currentTime - spawnTime) / duration);
             transform.position = Vector3.Lerp(startPos, endPos, t);
 
-            // MISS
             if (currentTime > hitTime + NoteManager.Instance.good)
             {
                 isHandled = true;
-
-                Debug.Log("MISS by time");
-
                 NoteManager.Instance.Miss(this);
-                Destroy(gameObject);
+                ReturnToPool();
             }
         }
 
         public void OnHit()
         {
             if (isHandled) return;
-            if (!GameManager.Instance.IsPlaying) return;
 
             isHandled = true;
 
@@ -82,7 +77,13 @@ namespace DuetCats.Scripts.Gameplay
 
             NoteManager.Instance.Hit(this);
 
-            Destroy(gameObject);
+            ReturnToPool();
+        }
+
+        void ReturnToPool()
+        {
+            if (NotePool.Instance != null)
+                NotePool.Instance.Return(prefabRef, gameObject);
         }
     }
 }
